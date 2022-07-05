@@ -1,0 +1,111 @@
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+font-family: verdana, sans-serif;
+}
+
+
+html { 
+	font-size: 80%; 
+}
+
+
+h1 {
+	font-size: $mainSize;
+  	color: $white;
+ 	margin: auto;
+ 	background-color: $bg-3;
+}
+
+
+header {
+		background-color: black;
+		padding: 2% 2%;
+
+		h2 {
+		text-align: center;
+		color: $white;
+  		background-image: $bg-5;
+  		border-radius: 30px;
+		padding: 1% 10%;
+		}	
+}
+
+
+h2 {
+	text-align: center;
+	color: $white;
+  	background-image: $bg-5;
+  	border-radius: 30px;
+	padding: 1% 10%;
+	margin-top: 5%;
+}
+
+footer {
+	justify-content: space-evenly;
+	display: flex;	
+	justify-content: center;
+  	background-image: $bg-5;
+  	padding: 3% 0%;
+
+  		button {
+				background-color: $black;
+				font-size: $size2;
+				}
+
+		 p {
+			color: $white;
+			font-size: $size1;
+			display: flex;
+			justify-content: center;
+			}
+
+		a {
+			align-items: center;
+			font-size: $size2;
+			margin: 30%;
+			color: $white;
+			text-decoration:none;
+
+
+			 &:hover {
+  				opacity: 1.1;
+  				transform: translateY(-10%);
+  				transition:all 400ms ease;
+  				}
+			}	
+}
+
+
+.parrafo_color	 {
+	color: $white;
+	font-size: $size3;
+	background-color: $black;
+}
+
+p {
+	padding: 1em;
+	text-align: justify;
+	margin-bottom: 0rem;
+}
+
+
+.correo_estilo {
+	font-style: italic;
+	color: #80FB94;
+	font-weight: bold;
+	margin: auto;
+	}
+
+
+form ul {
+	background-image: $bg-3;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	height: 50%;
+	width: 300px;
+	border-radius: 20px;
+	margin: auto;
+	}

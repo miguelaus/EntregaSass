@@ -1,0 +1,306 @@
+@import "_vars";
+@import "_navBar";
+@import "_commons";
+
+.imglogo { 
+width: 40px;
+background-color: $white;
+	@media (min-width: 280px) and (max-width: 320px) {
+	width:15px;
+	} 
+} 
+
+title {
+	text-align: center;
+	font-size:$size1;
+}
+
+
+.contenedor { 
+	background-color: $black;
+	padding: 1em;
+}
+
+
+figcaption{
+	text-align: center;
+	font-size: $size3;
+	padding-top: 5%;
+}
+
+.card1 { 
+	background-color: $bg-1;
+	border-radius: 5%;
+	opacity: 0.75;
+	transition:all 400ms ease;
+	cursor: default;
+	width:80%;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+  	padding-bottom: 1em;
+  	margin-top: 4%;
+  	background: $bg-2;
+
+  	&:hover {
+  		opacity: 1.25;
+  		box-shadow: 5px 5px 20px $white;
+  		transform: scale(1.03);
+  		}
+
+  	img {
+  		width: 59%;
+ 	 	margin: .4% 23%;
+ 		border-radius:20px;
+		}
+
+  	.Contenedor__masinfo--center {
+	text-align: center;
+	margin: auto;	
+	padding: 1%;
+	width: 40%;
+
+			a {
+			text-decoration:none;
+			color: $blue;
+			font-size:$sizeMin;
+			}
+			
+					&:hover {
+  					transform: translateY(-50%);
+  					transition:all 400ms ease;
+					}
+	}		
+
+}
+
+.card2 { 
+	@extend .card1;
+  	background: $bg-2;
+
+  	&:hover {
+  		opacity: 1.25;
+  		box-shadow: 5px 5px 20px $white;
+  		transform: scale(1.03);
+  		}
+
+  	img {
+  		width: 40%;
+ 	 	margin: .4% 30%;
+ 		border-radius:20px;
+		}
+
+	.Contenedor__masinfo--center {
+
+			a {
+			text-decoration:none;
+			color: $blue;
+			font-size:$sizeMin;
+			
+				&:hover {
+  				transform: translateY(-50%);
+  				transition:all 400ms ease;
+  				}
+			}
+
+
+	}
+}
+
+
+p {
+	padding: 1em;
+	text-align: justify;
+}
+
+
+
+.gridSesiones {
+	display: grid;
+	width: 100%;
+	background-color: $black;
+	padding: 15%;
+	align-content: space-around;
+	
+		h3 {
+			text-align: center;
+			font-size: $size3;
+			padding-bottom: 3%;
+		}
+}
+
+
+table {
+	margin:auto;
+	margin-top: 5%;
+	font-size: $sizeMin;
+	color: $white;
+	width: 55%;
+	text-align: center;
+	background-image: $bg-6;
+	border-radius: 1%;
+	opacity: .85;
+
+	.px-tabla{
+		padding: 2px;
+		border: $black 1px inset;
+	}
+
+}
+
+.bg-lista {
+	background-color: hotpink;
+  	background-image: $bg-6;
+  	list-style: none;
+  	border-radius: 10px;
+  	display: flex;
+  	justify-content: center;
+	}
+
+
+.bg-green {
+	background-image: $bg-5;
+ 	font-size: $size1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	color: white;
+	text-align: justify;
+	padding: 10%;
+	flex-direction: column;
+	margin-bottom: 10%;
+	}
+
+.bg-yellow {
+	@extend .bg-green;
+	background-image: $bg-6;
+	flex-direction: column;
+	}
+
+.bg-lista {
+	background-color: hotpink;
+	 background-image: $bg-6;
+	 list-style: none;
+	 border-radius: 10px;
+	 display: flex;
+	 justify-content: center;
+	 margin: auto;
+ 	}
+
+
+
+
+@media only screen and (min-width: 768px) {
+	
+	.contenedor_body{
+
+		display: grid;
+		grid-template-columns: 2fr;
+		grid-template-rows:auto;
+		grid-template-areas: 
+		"nav"
+		"header"
+		"mainsec"
+		"buttonup"
+		"pie";
+		}
+
+	.card1 {
+		width: 35%;
+		margin-left: 10%;
+	}
+	
+	.card2 {
+		width: 35%;
+		margin-right: 10%;
+	}
+
+	.contenedor { 
+	background-color: $black;
+	display: flex;
+	max-width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding-bottom: 1em;
+	}
+
+
+ 	nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	border-bottom: solid 2px $white;
+	border-top: solid 2px $white;
+	}
+
+
+	.grid-template-columns-row {
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	column-gap: 1%;
+	grid-row-gap: 1%;
+	padding: 3%;
+	}
+
+	.bg-lista {
+	background-color: hotpink;
+  	background-image: $bg-6;
+  	list-style: none;
+  	border-radius: 10px;
+  	display: flex;
+  	justify-content: center;
+	}
+
+	
+	.imglogo{ 
+	width: 60px;
+	background-color: $white;
+	} 
+
+
+
+}
+
+
+
+
+
+@media only screen and (min-width: 1024px) {
+
+	
+	nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	border-bottom: solid 3px $violet;
+	border-top: solid 3px $violet;
+	}
+
+	.imglogo {
+	width: 50px;
+	background-color: $white;
+	display: flex;
+	} 
+
+	.grid-template-columns-row {
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	column-gap: 1%;
+	grid-row-gap: 1%;
+	padding: 3%; 
+	}
+
+	.card1 {
+		width:40%;
+		margin:auto;
+		margin-top:4%;
+	}
+	
+	.card2 {
+		width: 40%;
+		margin-right:auto;
+		margin-top:4%;
+	}
+	
+}
