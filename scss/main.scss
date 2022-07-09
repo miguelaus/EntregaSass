@@ -1,6 +1,9 @@
+
 @import "_vars";
+@import "_mixins";
 @import "_navBar";
 @import "_commons";
+
 
 .imglogo { 
 width: 40px;
@@ -45,7 +48,8 @@ figcaption{
   	&:hover {
   		opacity: 1.25;
   		box-shadow: 5px 5px 20px $white;
-  		transform: scale(1.03);
+  		transform: translateY(-3%);
+  		transition:all 400ms ease;
   		}
 
   	img {
@@ -67,7 +71,7 @@ figcaption{
 			}
 			
 					&:hover {
-  					transform: translateY(-50%);
+  					transform: translateY(-20%);
   					transition:all 400ms ease;
 					}
 	}		
@@ -81,7 +85,8 @@ figcaption{
   	&:hover {
   		opacity: 1.25;
   		box-shadow: 5px 5px 20px $white;
-  		transform: scale(1.03);
+  		transform: translateY(-3%);
+  		transition:all 400ms ease;
   		}
 
   	img {
@@ -98,7 +103,7 @@ figcaption{
 			font-size:$sizeMin;
 			
 				&:hover {
-  				transform: translateY(-50%);
+  				transform: translateY(-20%);
   				transition:all 400ms ease;
   				}
 			}
@@ -108,9 +113,9 @@ figcaption{
 }
 
 
+
 p {
-	padding: 1em;
-	text-align: justify;
+	@include texto($size1,1.1em,$white,1% 1%);
 }
 
 
@@ -119,7 +124,7 @@ p {
 	display: grid;
 	width: 100%;
 	background-color: $black;
-	padding: 15%;
+	padding: 5%;
 	align-content: space-around;
 	
 		h3 {
@@ -153,19 +158,16 @@ table {
   	background-image: $bg-6;
   	list-style: none;
   	border-radius: 10px;
-  	display: flex;
-  	justify-content: center;
+  	@include d-flex();
 	}
 
 
 .bg-green {
+	@include texto($size1,1.1em,$white,1% 1%);
 	background-image: $bg-5;
- 	font-size: $size1;
-	display: flex;
-	justify-content: center;
+	@include d-flex();
 	align-items: center;
 	border-radius: 20px;
-	color: white;
 	text-align: justify;
 	padding: 10%;
 	flex-direction: column;
@@ -179,12 +181,11 @@ table {
 	}
 
 .bg-lista {
-	background-color: hotpink;
+	 @include d-flex();
+	 background-color: hotpink;
 	 background-image: $bg-6;
 	 list-style: none;
 	 border-radius: 10px;
-	 display: flex;
-	 justify-content: center;
 	 margin: auto;
  	}
 

@@ -1,0 +1,12 @@
+@mixin texto($size,$line-height,$color,$padding){
+	font-size:$size;
+	line-height:$line-height;
+	color:$color;
+	padding:$padding;
+
+}
+
+@mixin d-flex(){
+	display: flex;
+	justify-content: center;
+}

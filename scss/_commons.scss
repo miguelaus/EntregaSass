@@ -19,6 +19,8 @@ h1 {
 }
 
 
+
+
 header {
 		background-color: black;
 		padding: 2% 2%;
@@ -43,11 +45,10 @@ h2 {
 }
 
 footer {
-	justify-content: space-evenly;
-	display: flex;	
-	justify-content: center;
+	@include d-flex();
   	background-image: $bg-5;
   	padding: 3% 0%;
+  	justify-content: space-evenly;
 
   		button {
 				background-color: $black;
@@ -57,14 +58,13 @@ footer {
 		 p {
 			color: $white;
 			font-size: $size1;
-			display: flex;
-			justify-content: center;
+			@include d-flex();
 			}
 
 		a {
 			align-items: center;
 			font-size: $size2;
-			margin: 30%;
+			margin: 20%;
 			color: $white;
 			text-decoration:none;
 
@@ -85,7 +85,7 @@ footer {
 }
 
 p {
-	padding: 1em;
+	@include texto($size1,1.1em,$white,1em)
 	text-align: justify;
 	margin-bottom: 0rem;
 }
@@ -100,7 +100,13 @@ p {
 
 
 form ul {
-	background-image: $bg-3;
+
+	@if $lang==en{background-image: map-get($map: $flag, $key: 'british')}
+	@else if $lang==es{background-image: map-get($map: $flag, $key: 'spanish')}
+	@else if $lang==fr{background-image: map-get($map: $flag, $key: 'france')}
+	@else if $lang==it{background-image: map-get($map: $flag, $key: 'italian')}
+	@else {background-image:$bg-3;}
+	
 	list-style: none;
 	display: flex;
 	flex-direction: column;
@@ -108,4 +114,5 @@ form ul {
 	width: 300px;
 	border-radius: 20px;
 	margin: auto;
+	color: $black
 	}
