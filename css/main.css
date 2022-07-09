@@ -63,7 +63,8 @@ footer {
   justify-content: space-evenly; }
   footer button {
     background-color: #000000;
-    font-size: 1.1em; }
+    font-size: 1.1em;
+    border: none; }
   footer p {
     color: #FEF3F3;
     font-size: 1em;
@@ -71,7 +72,7 @@ footer {
     justify-content: center; }
   footer a {
     align-items: center;
-    font-size: 1.1em;
+    font-size: 1em;
     margin: 20%;
     color: #FEF3F3;
     text-decoration: none; }

@@ -53,6 +53,7 @@ footer {
   		button {
 				background-color: $black;
 				font-size: $size2;
+				border:none;
 				}
 
 		 p {
@@ -63,7 +64,7 @@ footer {
 
 		a {
 			align-items: center;
-			font-size: $size2;
+			font-size: $size1;
 			margin: 20%;
 			color: $white;
 			text-decoration:none;
