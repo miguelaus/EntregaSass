@@ -37,6 +37,9 @@ h1 {
   margin: auto;
   background-color: linear-gradient(to bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12); }
 
+ol li {
+  list-style: none; }
+
 header {
   background-color: black;
   padding: 2% 2%; }
